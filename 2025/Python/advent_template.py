@@ -4,6 +4,7 @@ import timeit
 def p1(lines):
     value = 0
 
+    grid = {complex(row,col) : int(val) for row,line in enumerate(lines) for col,val in enumerate(line)}
     for line in lines:
         pass
         
