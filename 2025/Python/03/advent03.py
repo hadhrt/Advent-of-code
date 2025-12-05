@@ -70,8 +70,8 @@ def p2(lines):
 
  
 
-#f = open(r"2025/python/Inputs/example.input", "r")
-f = open(r"2025/python/Inputs/03.input", "r")
+#f = open(r"2025/Inputs/example.input", "r")
+f = open(r"2025/Inputs/03.input", "r")
 lines = [line.strip() for line in f]
   
 start = timeit.default_timer()

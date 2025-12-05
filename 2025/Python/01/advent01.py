@@ -51,8 +51,8 @@ def p2(lines):
             
     return clicks
  
-#f = open(r"2025/python/Inputs/example.input", "r")
-f = open(r"2025/python/Inputs/01.input", "r")
+#f = open(r"2025/Inputs/example.input", "r")
+f = open(r"2025/Inputs/01.input", "r")
 
 lines = [line.strip() for line in f]
   

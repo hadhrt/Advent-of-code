@@ -1,2 +1,5 @@
-2025/Python/Inputs/*.input
-2025/Python/.vscode/
+2025/Inputs/*.input
+.vscode/
+target/
+*.code-workspace
+
