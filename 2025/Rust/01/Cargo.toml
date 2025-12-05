@@ -1,0 +1,10 @@
+[package]
+name = "Advent01"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+
+[[bin]]
+name = "Advent01"
+path = "src/Advent01.rs"
