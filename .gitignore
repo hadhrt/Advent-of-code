@@ -1,4 +1,5 @@
-2025/Inputs/*.input
+*.input
+*.txt
 .vscode/
 target/
 *.code-workspace
