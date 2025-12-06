@@ -39,7 +39,7 @@ def p2(lines):
 
 f = open(r"2025/Inputs/example.input", "r")
 #f = open(r"2025/Inputs/01.input", "r")
-lines = [line.strip() for line in f]
+lines = [line.strip("\n") for line in f]
   
 start = timeit.default_timer()
 print (f"Part 1: {p1(lines)}")
