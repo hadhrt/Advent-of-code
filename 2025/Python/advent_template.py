@@ -1,27 +1,37 @@
 import timeit
+from dataclasses import dataclass
 
-ADJ_OFFSETS = (-1-1j, -1+0j, -1+1j,
-                0-1j,         0+1j,
-                1-1j,  1+0j,  1+1j)
+@dataclass(frozen=True, order = True)
+class Coord:
+    row: int
+    col: int
 
-ADJ_OFFSETS_NO_DIAG = (     -1+0j,
-                       0-1j,       0+1j,
-                             1+0j,)
+    def __add__(self, other):
+        return Coord(self.row + other.row, self.col + other.col)
+
+
+ADJ_ALL_OFFSETS = ( Coord(-1,-1), Coord(-1, 0), Coord(-1, 1),
+                    Coord( 0,-1),               Coord(-1, 1),
+                    Coord( 1,-1), Coord( 1, 0), Coord( 1, 1))
+
+ADJ_ORTH_OFFSETS = (             Coord(-1, 0),   
+                    Coord( 0,-1),               Coord(-1, 1),
+                                 Coord( 1, 0))
 
 def print_grid(grid):
     print_string = ""
     for coord, val in grid.items():
-        if coord.imag == 0:
+        if coord.col == 0:
             print_string += "\n"
         print_string += val
-    print(print_string)   
+    print(print_string)
     
     
 def p1(lines):
     value = 0
 
-    # grid = {complex(row,col) : int(val) for row,line in enumerate(lines) for col,val in enumerate(line)}
-    # print_grid(grid)
+    #grid = {Coord(row,col) : val for row,line in enumerate(lines) for col,val in enumerate(line)}
+    #print_grid(grid)
     for line in lines:
         pass
         
